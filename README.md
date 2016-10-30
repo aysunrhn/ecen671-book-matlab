@@ -1,9 +1,11 @@
+MATLAB for Math of Signals/Systems Book
+=======================================
 
 The directories here contain code associated with "Mathematical
 Methods and Algorithms for Signal Processing" by Todd K. Moon and Wynn
 C. Stirling.
 
-DISCLAIMER:
+**DISCLAIMER**:
 We make no warranty, express or implied, that the programs or
 algorithms presented in this book (or its accompanying media) are free
 of error, or that they will meet your requirements for any particular
@@ -19,26 +21,27 @@ The MathWorks, Inc.  The MathWorks assume no responsibility for any
 errors that may exist in these routines.
 
 
-USAGE:
+**USAGE**:
 You are free to use the programs or any derivative of them for any
 scientific purpose, but please reference this book. 
 
-COPYRIGHT:
+**COPYRIGHT**:
 Programs and data in these directories are Copyright (C) 1999 by Todd
 K. Moon, unless otherwise indicated in the program file or appropriate
 readme file.
 
-VERSION:
+**VERSION**:
 The code listed here has been written with Matlab v. 5 or above.
 (Most of the algorithms will run with v. 4, but in some cases we make
 use of 'end', cell arrays, and other version 5 features.
 
+---------------------------------------------------
 
-DIRECTORIES:
-bookalgs -- contains the algorithms listed or referenced in the book,
+### DIRECTORIES:
+- bookalgs -- contains the algorithms listed or referenced in the book,
    as well as function which these reference
 
-mkpict -- contains functions and Matlabs scripts that are used to make the
+- mkpict -- contains functions and Matlabs scripts that are used to make the
    Matlab-based plots appearing in the book.  These are provided for
    researchers who want to profit from the form of a plot for their
    own work, and who want to test the result.
@@ -50,15 +53,15 @@ mkpict -- contains functions and Matlabs scripts that are used to make the
    testing the algorithms referenced in the book, and in that regard
    should be regarded as part of the testing suite.
 
-testers -- contains functions and scripts to test the algorithms
+- testers -- contains functions and scripts to test the algorithms
    appearing in the book, other than those that appear in the mkpict
    directory.  These can be used as examples of calling sequences.
 
-solutions -- most (but not all) homework problems requiring Matlab
-   code to be written have code provided here.  DON'T CHEAT yourself
-   by rushing to the solution.  Learn to do it yourself!
+- solutions -- most (but not all) homework problems requiring Matlab
+   code to be written have code provided here.  **DON'T CHEAT yourself
+   by rushing to the solution.  Learn to do it yourself!**
 
-misc -- is a treasure trove of functions which were written more or
+- misc -- is a treasure trove of functions which were written more or
    less in parallel with the book.  Some categories of functions:
    number theoretical methods: including fast convolution, CRT for 
      integers and polynomials, Euclidean algorithm, polynomial operations,
@@ -76,38 +79,31 @@ misc -- is a treasure trove of functions which were written more or
    processing, and another part --- also removed --- on interpolation
    and approximation.
 
-data -- example data used in the blind source separation; the image
+- data -- example data used in the blind source separation; the image
    for tomographic reconstruction; wavelet and scaling function data
    for plots.
 
+-------------------------------------------------------
 
-TOOLBOXES:
+### TOOLBOXES:
 The code written should run with Matlab without additional toolboxes,
 with the following known exceptions:
 
-bookalgs/eigmakePQ.m requires the use of the sinc function (found in
-       the signal processing toolbox)
+`bookalgs/eigmakePQ.m` requires the use of the `sinc` function (found in the signal processing toolbox)
 
-bookalgs/testirwls.m makes use of the freqz function for plotting (found in
-       the signal processing toolbox)
+`bookalgs/testirwls.m` makes use of the `freqz` function for plotting (found in the signal processing toolbox)
 
-misc/kaisfilt.m requires the use of the sinc and the frequz function (found in
-       the signal processing toolbox)
+`misc/kaisfilt.m` requires the use of the `sinc` and the `freqz` function (found in the signal processing toolbox)
 
-misc/ratintfilt.m makes use of the zplane function for plotting (found in
-       the signal processing toolbox)
+`misc/ratintfilt.m` makes use of the `zplane` function for plotting (found in the signal processing toolbox)
 
-mkpict/testeigfil.m and mkpict/testeigfil2.m use the freqz function
-       for plotting (found in the signal processing toolbox)
+`mkpict/testeigfil.m` and `mkpict/testeigfil2.m` use the `freqz` function for plotting (found in the signal processing toolbox)
 
-testers/bliter.m requires the use of the sinc function (found in
-       the signal processing toolbox)
+`testers/bliter.m` requires the use of the `sinc` function (found in the signal processing toolbox)
 
-testers/lpfilttest.m makes use of the freqz function for plotting (found in
-       the signal processing toolbox)
+`testers/lpfilttest.m` makes use of the `freqz` function for plotting (found in the signal processing toolbox)
 
-testers/testbplp.m makes use of the freqz function for plotting (found in
-       the signal processing toolbox)
+`testers/testbplp.m` makes use of the `freqz` function for plotting (found in the signal processing toolbox)
 
 
 
@@ -115,6 +111,7 @@ testers/testbplp.m makes use of the freqz function for plotting (found in
 ***************************************************************
 Directory: bookalgs
 ***************************************************************
+```matlab
 art1.m
 % 
 % Produce an updated solution x to Ax = b using the algebraic reconstruction
@@ -129,12 +126,14 @@ art1.m
 % b = right-hand side
 % 
 % Output x= updated solution
+```
 
-
+```matlab
 bayes3.m
 % Minimax decision for Gaussian
+```
 
-
+```matlab
 bidiag.m
 % 
 % bidiagonalize the real symmetric matrix A: UAV' = B,
@@ -146,23 +145,27 @@ bidiag.m
 % B = bidiagonal
 % U = orthogonal transformation (optional output)
 % V = orthogonal transformation (optional output)
+```
 
-
+```matlab
 bliter1.m
 % Iterate on bandlimited data using two projections
+```
 
-
+```matlab
 bss1.m
 % Blind source separation example
+```
 
-
+```matlab
 bssg.m
 %
 % The nonlinear function in the neural network
 %
 % function y = bssg(v).  
+```
 
-
+```matlab
 cholesky.m
 %
 % Compute the Cholesky factorization of B, B = LL'
@@ -173,12 +176,14 @@ cholesky.m
 % B = matrix to be factored
 %
 % L = lower triangular factor
+```
 
-
+```matlab
 compmap2.m
 % Run the composite mapping algorithm to make a positive sequence
+```
 
-
+```matlab
 conjgrad1.m
 % function [x,D] = conjgrad1(Q,b)
 %
@@ -186,8 +191,9 @@ conjgrad1.m
 %
 % Q = symmetric matrix
 % b = right-hand side
+```
 
-
+```matlab
 conjgrad2.m
 %
 % Apply the conjugate gradient to minimize a function
@@ -200,8 +206,9 @@ conjgrad2.m
 %
 % Output x = update of point
 % X = array of points examined (optional)
+```
 
-
+```matlab
 convnorm.m
 %
 % Compute the Hamming distance between the branchweights and the input
@@ -210,8 +217,9 @@ convnorm.m
 % 
 % function d = convnorm(branch,input,state,nextstate)
 % 
+```
 
-
+```matlab
 dijkstra.m
 % 
 % Find the set of shortest paths from vertex a to each of the other vertices
@@ -225,8 +233,9 @@ dijkstra.m
 %
 % dist(i) = shortest distance from vertex a to vertex i.
 % prevnode(i) = vertex prior to vertex i on the shortest path to i.
+```
 
-
+```matlab
 dirtorefl.m
 % 
 % Convert from direct-form FIR filter coefficients in a
@@ -237,8 +246,9 @@ dirtorefl.m
 % a = direct form coefficients
 %
 % kapp = lattice form coefficients
+```
 
-
+```matlab
 durbin.m
 % 
 % solve the nxn Toeplitz system Tx = [r(1)..r(n)]
@@ -250,8 +260,9 @@ durbin.m
 %
 % r = input vector
 % x = solution to Tx = r
+```
 
-
+```matlab
 eigfil.m
 %
 % Design an eigenfilter
@@ -264,8 +275,9 @@ eigfil.m
 % alpha = tradeoff parameter between stopband and passband
 %
 % h = filter coefficients
+```
 
-
+```matlab
 eigfilcon.m
 %
 % Design an eigenfilter with values constrained at some frequencies
@@ -280,8 +292,9 @@ eigfilcon.m
 % d = desired magnitude values at those frequencies
 %
 % h = filter coefficients
+```
 
-
+```matlab
 eigmakePQ.m
 %
 % Make the P and Q matrices for eigenfiltering
@@ -291,8 +304,9 @@ eigmakePQ.m
 % wp = passband frequency
 % ws = stopband frequency
 % N = number of coefficients
+```
 
-
+```matlab
 eigqrshiftstep.m
 % 
 % Perform the implicit QR shift on T, where the shift
@@ -305,13 +319,15 @@ eigqrshiftstep.m
 %
 % T = T matrix after QR shift
 % Q = (optional) orthogonal matrix
+```
 
-
+```matlab
 em1.m
 % Illustration of example em algorithm computations
 %
+```
 
-
+```matlab
 esprit.m
 %
 % Compute the frequency parameters using the ESPRIT method
@@ -324,15 +340,17 @@ esprit.m
 % p = number of modes
 %
 % f = vector of frequencies (in Hz/sample)
+```
 
-
+```matlab
 et1.m
 % et1.m
 % Perform tomographic reconstruction using the EM algorithm
 % im is a (nr x nc) image scaled so that 0=white, 255=black
 % nr = number of rows;   nc = number of columns
+```
 
-
+```matlab
 fblp.m
 %
 % Forward-backward linear predictor
@@ -347,8 +365,9 @@ fblp.m
 %
 % a = filter coefficients
 % sigma = standard deviation of noise
+```
 
-
+```matlab
 fordyn.m
 %
 % Do forward dynamic programing
@@ -360,8 +379,9 @@ fordyn.m
 %
 % pathlist = list of paths through graphs
 % cost = cost of the paths
+```
 
-
+```matlab
 gamble.m
 %
 % Return the bets for a race with win probabilities p and subfair odds o,
@@ -370,8 +390,9 @@ gamble.m
 %
 % p = probability of win
 % o = subfair odds
+```
 
-
+```matlab
 gaussseid.m
 % 
 % Produce an updated solution x to Ax = b using Gauss-Seidel iteration
@@ -383,8 +404,9 @@ gaussseid.m
 % b = right-hand side
 % 
 % Output x= updated solution
+```
 
-
+```matlab
 golubkahanstep.m
 % 
 % Given a bidiagonal matrix B with NO zeros on the diagonal or
@@ -398,8 +420,9 @@ golubkahanstep.m
 %
 % B = new bidiagonal matrix
 % U, V = new estimate of U and V
+```
 
-
+```matlab
 gramschmidt1.m
 % 
 % Compute the Gram-Schmidt orthogonalization of the 
@@ -411,8 +434,9 @@ gramschmidt1.m
 %
 % Q = orthogonal matrix
 % R = upper triangular matrix such that A = QR
+```
 
-
+```matlab
 hmmApiupn.m
 % 
 % update the HMM probabilities A and pi using the normalized forward and
@@ -427,8 +451,9 @@ hmmApiupn.m
 %
 % A = updated transition probability matrix
 % pi = updated initial probability matrix
+```
 
-
+```matlab
 hmmabn.m
 % 
 % compute the normalized forward and backward probabilities for the model HMM
@@ -445,8 +470,9 @@ hmmabn.m
 %            (betahat(:,t) = betahat(y_{t+1}^T|:))
 % f = initial probability types
 % c = normalizing factors
+```
 
-
+```matlab
 hmmdiscf.m
 %
 % Compute the pmf value for a discrete distribution
@@ -456,8 +482,9 @@ hmmdiscf.m
 % y = output value
 % f = output distribution
 % s = state
+```
 
-
+```matlab
 hmmdiscfupn.m
 % 
 % Update the discrete HMM output distribution f using the normalized forward
@@ -472,8 +499,9 @@ hmmdiscfupn.m
 % HMM = current model parameters
 %
 % f = updated output distribution
+```
 
-
+```matlab
 hmmf.m
 % 
 % Determine the likelihood of the output y for the model HMM
@@ -486,8 +514,9 @@ hmmf.m
 % s = state
 %
 % p = likelihood
+```
 
-
+```matlab
 hmmfupdaten.m
 % 
 % Provide an update to the state output distributions for the HMM model
@@ -502,8 +531,9 @@ hmmfupdaten.m
 % HMM = current model paramters
 %
 % f = updated output distribution
+```
 
-
+```matlab
 hmmgausf.m
 % 
 % Compute the pmf value for a Gaussian distribution
@@ -513,8 +543,9 @@ hmmgausf.m
 % y = output value
 % f = output distribution
 % s = state
+```
 
-
+```matlab
 hmmgausfupn.m
 % 
 % Update the Gaussian output distribution f of the HMM using the normalized
@@ -529,8 +560,9 @@ hmmgausfupn.m
 % HMM = current model parameters
 %
 % f = updated output distribution
+```
 
-
+```matlab
 hmmgendat.m
 % 
 % Generate T outputs of a Hidden Markov model HMM
@@ -542,8 +574,9 @@ hmmgendat.m
 %
 % y = output sequence
 % s = (optional) state sequence
+```
 
-
+```matlab
 hmmgendisc.m
 % 
 % Generate T outputs of a HMM with a discrete output distribution
@@ -555,8 +588,9 @@ hmmgendisc.m
 %
 % y = output sequence
 % ss = (optional) state sequence (for testing purposes)
+```
 
-
+```matlab
 hmmgengaus.m
 % 
 % Generate T outputs of a HMM with a Gaussian output distribution
@@ -568,8 +602,9 @@ hmmgengaus.m
 %
 % y = output sequence
 % ss = (optional) state sequence (for testing purposes)
+```
 
-
+```matlab
 hmminitvit.m
 % 
 % Initialize the Viterbi algorithm stuff for HMM sequence identification
@@ -579,8 +614,9 @@ hmminitvit.m
 % inHMM = a structure containing the initial probabilities, state transition
 %         probabilities, and output probabilities
 % inpathlen = length of window used in VA
+```
 
-
+```matlab
 hmmlpyseqn.m
 %
 % Find the log likelihood of the sequence y[1],y[2],...,y[T],
@@ -592,8 +628,9 @@ hmmlpyseqn.m
 % HMM = current estimate of HMM parameters
 %
 % lpy = log P(y|HMM)
+```
 
-
+```matlab
 hmmlpyseqv.m
 % 
 % Find the log likelihood of the sequence y[1],y[2],...,y[T]
@@ -606,8 +643,9 @@ hmmlpyseqv.m
 % HMM = HMM parameters
 %
 % lpy = log likelihood value
+```
 
-
+```matlab
 hmmnorm.m
 % 
 % Compute the branch norm for the HMM using the Viterbi approach
@@ -620,17 +658,20 @@ hmmnorm.m
 % nextstate = next state in trellis
 %
 % d = branch norm (log-likelihood)
+```
 
-
+```matlab
 hmmnotes.m
 % Notes on data structures and functions for the HMM
 % 
+```
 
-
+```matlab
 hmmtest2vb.m
 % Test the HMM using both Viterbi and EM-algorithm based training methods
+```
 
-
+```matlab
 hmmupdaten.m
 %
 % Compute updated HMM model from observations
@@ -641,8 +682,9 @@ hmmupdaten.m
 % HMM = current model parameters
 %
 % hmmo = updated model parameters
+```
 
-
+```matlab
 hmmupdatev.m
 % 
 % Compute updated HMM model from observations y using Viterbi methods
@@ -654,8 +696,9 @@ hmmupdatev.m
 % HMM = old HMM (to be updated)
 %
 % hmmo = updated HMM
+```
 
-
+```matlab
 hmmupfv.m
 % 
 % Compute an update to the distribution f based upon the data y
@@ -669,8 +712,9 @@ hmmupfv.m
 % f = distribution (cell) to update
 %
 % fnew = updated distribution
+```
 
-
+```matlab
 houseleft.m
 %
 % Apply the Householder transformation based on v to A on the left
@@ -681,8 +725,9 @@ houseleft.m
 % v = a household vector
 %
 % B = H_v A
+```
 
-
+```matlab
 houseright.m
 %
 % Apply the householder transformation based on v to A on the right
@@ -693,13 +738,15 @@ houseright.m
 % v = a household vector
 %
 % B = H_v A
+```
 
-
+```matlab
 ifs3a.m
 % Plot the logistic map and the orbit of a point
 %
+```
 
-
+```matlab
 initcluster.m
 %
 % 
@@ -710,15 +757,17 @@ initcluster.m
 % X = input data: each column is a training data vector
 % m = number of clusters
 % Y = initial cluster: each column is a point
+```
 
-
+```matlab
 initpoisson.m
 % 
 % Initialize the global variables for the poisson generator
 % 
 % function initpoisson
+```
 
-
+```matlab
 initvit1.m
 % 
 % Initialize the data structures and pointers for the Viterbi algorithm
@@ -736,8 +785,9 @@ initvit1.m
 %          branchweight{4,1} = 3; branchweight{4,2} = 3;
 % inpathlen: length of window over which to compute
 % normfun: the norm function used to compute the branch cost
+```
 
-
+```matlab
 invwavetrans.m
 %
 % Compute the inverse discrete wavelet transform 
@@ -749,8 +799,9 @@ invwavetrans.m
 % coeff = wavelet coefficients
 %
 % c = inverse transformed data
+```
 
-
+```matlab
 invwavetransper.m
 %
 % Compute the periodized inverse discrete wavelet transform 
@@ -763,8 +814,9 @@ invwavetransper.m
 %    If length(C) is not a power of 2, J must be specified.
 %
 % c = inverse discrete wavelet transform of C
+```
 
-
+```matlab
 irwls.m
 % 
 % Computes the minimum solution c to ||x-Ac||_p using
@@ -777,8 +829,9 @@ irwls.m
 % p = L_p norm
 %
 % c = solution vector
+```
 
-
+```matlab
 jacobi.m
 % 
 % Produce an updated solution x to Ax = b using Jacobi iteration
@@ -790,13 +843,15 @@ jacobi.m
 % b = right-hand side
 % 
 % Output x= updated solution
+```
 
-
+```matlab
 kalex1.m
 % Kalman filter example 1
 %
+```
 
-
+```matlab
 kalman1.m
 % 
 % Computes the Kalman filter esimate xhat(t+1|t+1)
@@ -805,8 +860,9 @@ kalman1.m
 % where cov(w) = Q  and cov(v) = R, 
 % The prior estimate is x0, and the prior covariance is P0.
 % 
+```
 
-
+```matlab
 karf.m
 %
 % Evaluate the potential function f(x,c)
@@ -818,8 +874,9 @@ karf.m
 % c = constraint vector
 %
 % f = potential function
+```
 
-
+```matlab
 karmarker.m
 % 
 % Implement a Karmarker-type algorithm for linear programming
@@ -832,8 +889,9 @@ karmarker.m
 % A,c = system matrices
 %
 % x = solution
+```
 
-
+```matlab
 kissarma.m
 % 
 % Determine the ARMA parameters a and b of order p based upon the data in y.
@@ -845,8 +903,9 @@ kissarma.m
 %
 % a = AR coefficients
 % b = MA coefficients
+```
 
-
+```matlab
 levinson.m
 % 
 % Given a vector r = (r_0,r_1,\ldots,r_{n-1}),
@@ -861,8 +920,9 @@ levinson.m
 % b = right-hand side
 % 
 % y = solution to Tx = b
+```
 
-
+```matlab
 lgb.m
 % 
 % Find m clusters on the data X
@@ -875,8 +935,9 @@ lgb.m
 %
 % Y = set of clusters: each column is a cluster centroid
 % d = minimum total distortion
+```
 
-
+```matlab
 lms.m
 % 
 % Given a (real) scalar input signal x and a desired scalar signal d,
@@ -890,8 +951,9 @@ lms.m
 %
 % h = updated LMS filter coefficient vector
 % eap = (optional) a-priori error
+```
 
-
+```matlab
 lmsinit.m
 %
 % Initialize the LMS filter
@@ -900,8 +962,9 @@ lmsinit.m
 %
 % m = dimension of vector
 % mu = lms stepsize
+```
 
-
+```matlab
 logistic.m
 % 
 % Compute the logistic function y = lambda*x*(1-x)
@@ -910,8 +973,9 @@ logistic.m
 %
 % x = input value (may be a vector)
 % lambda = factor of the function
+```
 
-
+```matlab
 lpfilt.m
 % 
 % Design an optimal linear-phase filter using linear programming
@@ -924,8 +988,9 @@ lpfilt.m
 %
 % h = filter coefficients
 % delta1 = pass-band ripple
+```
 
-
+```matlab
 lsfilt.m
 %
 % Determine a least-squares filter h with m coefficients 
@@ -941,8 +1006,9 @@ lsfilt.m
 %
 % h = least-squares filter
 % X = (optional) data matrix
+```
 
-
+```matlab
 makehankel.m
 % 
 % form a hankel matrix from the input data y
@@ -954,8 +1020,9 @@ makehankel.m
 % n = number of block columns in H
 %
 % H = Hankel matrix formed from y
+```
 
-
+```matlab
 makehouse.m
 %
 % Make the Householder vector v such that Hx has zeros in 
@@ -966,8 +1033,9 @@ makehouse.m
 % x = vector to be transformed
 %
 % v = Householder vector
+```
 
-
+```matlab
 massey.m
 %
 % Return the shortest binary (GF(2)) LFSR consistent with the data sequence y
@@ -978,8 +1046,9 @@ massey.m
 %
 % c = LFSR connections, c = 1 + c(2)D + c(3)D^2 + ... c(L+1)D^L
 %     (Note: opposite from usual Matlab order)
+```
 
-
+```matlab
 maxeig.m
 %
 % Compute the largest eigenvalue and associated eigenvector of 
@@ -991,8 +1060,9 @@ maxeig.m
 %
 % lambda = largest eigenvalue
 % x = corresponding eigenvector
+```
 
-
+```matlab
 mineig.m
 % 
 % Compute the smallest eigenvalue and associated eigenvector of 
@@ -1003,8 +1073,9 @@ mineig.m
 %
 % lambda = minimum eigenvalue
 % x = corresponding eigenvector
+```
 
-
+```matlab
 musicfun.m
 %
 % Compute the "MUSIC spectrum" at a frequency f.
@@ -1016,8 +1087,9 @@ musicfun.m
 % V = eigenvectors of autocorrelation matrix
 %
 % pf = plotting value for spectrum
+```
 
-
+```matlab
 neweig.m
 % 
 % Compute the eigenvalues and eigenvector of a real symmetric matrix A
@@ -1028,8 +1100,9 @@ neweig.m
 %
 % T = diagonal matrix of eigenvalues
 % Q = (optional) matrix of eigenvectors
+```
 
-
+```matlab
 newlu.m
 %
 % Compute the lu factorization of A
@@ -1040,8 +1113,9 @@ newlu.m
 %
 % lu = matrix containg L and U factors
 % indx = index of pivot permutations
+```
 
-
+```matlab
 newsvd.m
 % 
 % Compute the singular value decomposition of the mxn matrix A, as A= u s v'.
@@ -1056,8 +1130,9 @@ newsvd.m
 % Output:
 % s = singular values
 % u,v = (optional) orthogonal matrices
+```
 
-
+```matlab
 nn1.m
 %
 % Compute the output of a neural network with weights in w
@@ -1074,8 +1149,9 @@ nn1.m
 %    each layer:
 %    Y{1} = input, Y{2} = first hidden layer, etc.
 %    V{1} = first hidden layer, etc.
+```
 
-
+```matlab
 nnrandw.m
 % 
 % Generate an initial set of weights for a neural network at random,
@@ -1086,8 +1162,9 @@ nnrandw.m
 %   m(1) = number of inputs, m(2) = first hidden layer, etc.
 %
 % w = random weights
+```
 
-
+```matlab
 nntrain1.m
 %
 % Train a neural network using the input/output training data [x,d]
@@ -1106,8 +1183,9 @@ nntrain1.m
 %
 % w = new weights
 % err = (optional) total squared error from training
+```
 
-
+```matlab
 permutedata.m
 % 
 % Randomly permute the columns of the data x.
@@ -1120,8 +1198,9 @@ permutedata.m
 %   type=2: random selection without replacement (not really a permutation)
 %
 % xp = permuted x
+```
 
-
+```matlab
 pisarenko.m
 %
 % Compute the the modal frequencies using Pisarenko's method,
@@ -1133,8 +1212,9 @@ pisarenko.m
 %
 % f = vector of frequencies
 % P = vector of amplitudes
+```
 
-
+```matlab
 pivottableau.m
 % 
 % Perform pivoting on an augmented tableau until 
@@ -1147,8 +1227,9 @@ pivottableau.m
 %
 % tableau = pivoted tableau 
 % basicptr = new list of basic variables
+```
 
-
+```matlab
 poisson.m
 % 
 % Generate a sample of a random variable x with mean lambda
@@ -1160,8 +1241,9 @@ poisson.m
 % lambda = Poisson mean
 %
 % x = Poisson random variable
+```
 
-
+```matlab
 ptls1.m
 % 
 % Compute the Partial Total Least Squares solution of Ax = b
@@ -1176,8 +1258,9 @@ ptls1.m
 % x = ptls solution to Ax=b
 % Ahat = modified A matrix
 % bhat = modified b matrix
+```
 
-
+```matlab
 ptls2.m
 % 
 % Find the partial total least-squares solution to Ax = b,
@@ -1191,23 +1274,26 @@ ptls2.m
 % k2 = number of columns of A not modified
 %
 % x = PTLS solution to Ax=b
+```
 
-
+```matlab
 qf.m
 % 
 % Compute the Q function:
 %
 % function p = qf(x)
 %   p = 1/sqrt(2pi)int_x^infty exp(-t^2/2)dt
+```
 
-
+```matlab
 qfinv.m
 % 
 % Compute the inverse of the q function
 %
 % function x = qfinv(q)
+```
 
-
+```matlab
 qrgivens.m
 % 
 % Compute the QR factorization of a matrix A without column pivoting
@@ -1220,8 +1306,9 @@ qrgivens.m
 % R = upper triangular matrix
 % thetac = matrix of c values 
 % thetas = matrix of s values (these must be converted to Q)
+```
 
-
+```matlab
 qrhouse.m
 % 
 % Compute the QR factorization of a matrix A without column pivoting
@@ -1236,8 +1323,9 @@ qrhouse.m
 %           (must be converted to Q ) using qrmakeq.
 %           
 % R = upper triangular matrix
+```
 
-
+```matlab
 qrmakeq.m
 % 
 % Convert the V matrix returned by qrhouse into a Q matrix
@@ -1247,8 +1335,9 @@ qrmakeq.m
 % V = [v1 v2 .... vr], Householder vectors produced by qrhouse
 %
 % Q = [Q1 Q2 ... Qr], the orthogonal matrix in the QR factorization
+```
 
-
+```matlab
 qrmakeqgiv.m
 % 
 % Given thetac and thetas containing rotation parameters from Givens rotations,
@@ -1259,8 +1348,9 @@ qrmakeqgiv.m
 % thetas = sin component of Givens rotation
 %
 % Q = orthogonal matrix formed by Givens rotations
+```
 
-
+```matlab
 qrqtb.m
 % 
 % Given a matrix V containing Householder vectors as columns
@@ -1273,8 +1363,9 @@ qrqtb.m
 % V = matrix of Household vectors (as columns)
 %
 % output: B = Q^H B
+```
 
-
+```matlab
 qrqtbgiv.m
 % 
 % Given thetac and thetas containing rotation parameters from Givens rotations,
@@ -1288,8 +1379,9 @@ qrqtbgiv.m
 % thetas = sine component of rotations from Givens rotations
 %
 % Output: B <-- Q^H B
+```
 
-
+```matlab
 qrtheta.m
 % 
 % Given x and y, compute cos(theta) and sin(theta) for a Givens rotation
@@ -1299,8 +1391,9 @@ qrtheta.m
 % (x, y) = point to determine rotation
 %
 % c = cos(theta),   s=sin(theta)
+```
 
-
+```matlab
 reducefree.m
 % 
 % Perform elimination on the free variables in a linear programming problem
@@ -1315,8 +1408,9 @@ reducefree.m
 % value = value of linear program
 % savefree = tableau information for restoring free variables
 % nfree = number of free variables found
+```
 
-
+```matlab
 refltodir.m
 % 
 % Convert from a set of reflection coefficients kappa(1)...kappa(m)
@@ -1327,8 +1421,9 @@ refltodir.m
 % kappa = vector of reflection coefficients
 %
 % a = output filter coefficients = [1 a(1) a(2) ... a(m)]
+```
 
-
+```matlab
 restorefree.m
 % 
 % Restore the free variables by back substitution
@@ -1340,8 +1435,9 @@ restorefree.m
 % freevars = list of free variables
 % 
 % x = linear programming solution (including free variables)
+```
 
-
+```matlab
 rls.m
 %
 % Given a scalar input signal x and a desired scalar signal d,
@@ -1356,15 +1452,17 @@ rls.m
 %
 % h = updated filter weight vector
 % eap = (optional) a-priori estimation error
+```
 
-
+```matlab
 rlsinit.m
 %
 % Initialize the RLS filter
 %
 % function rlsinit(m,delta)
+```
 
-
+```matlab
 simplex1.m
 % 
 % Find the solution of a linear programming problem in standard form
@@ -1383,8 +1481,9 @@ simplex1.m
 %    If w is used as a return value, then the dual problem is also solved.
 %    (In this implementation, the dual problem cannot be solved when free
 %    variables are employed.)
+```
 
-
+```matlab
 sor.m
 % 
 % Produce an updated solution x to Ax = b successive over-relaxation
@@ -1398,8 +1497,9 @@ sor.m
 % omega = relaxation parameter
 % 
 % Output x= updated solution
+```
 
-
+```matlab
 sysidsvd.m
 % 
 % given a sequence of impulse responses in h
@@ -1411,25 +1511,29 @@ sysidsvd.m
 % ord = system order (overrides tolerance)
 %
 % (A,B,C) = estimated system matrix parameters
+```
 
-
+```matlab
 testet.m
 % testet.m
 % Test the emission tomography code
 % This script loads an image file, plots it, then calls the 
 % code to test the tomographic reconstruction
+```
 
-
+```matlab
 testirwls.m
 % Test the irwls routine for a filter design problem
 % After [Burrus 1994, p. 2934]
+```
 
-
+```matlab
 testnn10.m
 % Test the neural network on a pattern recognition problem
 %
+```
 
-
+```matlab
 tls.m
 % 
 % determine the total least-squares solution of Ax=b
@@ -1440,8 +1544,9 @@ tls.m
 % b = right-hand side
 %
 % x = TLS solution to Ax=b
+```
 
-
+```matlab
 tohankel.m
 % 
 % Determine the matrix nearest to A which is Hankel and has rank r
@@ -1454,8 +1559,9 @@ tohankel.m
 %
 % Ouptut A = Hankel matrix with desired properties
 % d = norm of difference between matrices
+```
 
-
+```matlab
 tohanktoep.m
 % 
 % Determine the matrix nearest to A which is the stack
@@ -1470,8 +1576,9 @@ tohanktoep.m
 %
 % output: A = matrix with desired properties
 % normlist = (optional) vector of errors
+```
 
-
+```matlab
 tokarmarker.m
 % 
 % Given a linear programming problem in standard form
@@ -1487,8 +1594,9 @@ tokarmarker.m
 % (A,b,c) = matrices in standard form
 %
 % Anew, cnew = matrices in Karmarker standard form
+```
 
-
+```matlab
 tostoch.m
 % 
 % Determine the matrix nearest to A which is stochastic using
@@ -1498,8 +1606,9 @@ tostoch.m
 % A = input matrix
 %
 % Output: A = nearest stochastic A
+```
 
-
+```matlab
 tridiag.m
 % 
 % tridiagonalize the real symmetric matrix A
@@ -1510,15 +1619,17 @@ tridiag.m
 %
 % T = tridiagonal matrix
 % Q = (optional) orthogonal transformation
+```
 
-
+```matlab
 vitbestcost.m
 % 
 % Returns the best cost so far in the Viterbi algorithm
 %
 % function c = vitbestcost
+```
 
-
+```matlab
 viterbi1.m
 % 
 % Run the Viterbi algorithm on the input for one branch
@@ -1532,8 +1643,9 @@ viterbi1.m
 % p = statenum on path if enough branches in window
 %
 % Call vitflush to clear out path when finished
+```
 
-
+```matlab
 vitflush.m
 % 
 % Flush out the rest of the viterbi paths
@@ -1545,8 +1657,9 @@ vitflush.m
 %    Otherwise, choose path with best cost among termnode
 %
 % plist = list of paths from trellis
+```
 
-
+```matlab
 warp.m
 % 
 % find the dynamic warping between A and B (which may not be of the
@@ -1558,8 +1671,9 @@ warp.m
 % B = cells of the vectors, B{1}, B{2}, ..., B{N}
 %
 % path = Kx2 array of (i,j) correspondence
+```
 
-
+```matlab
 warshall.m
 % 
 % Find the transitive closure of the graph represented by the adjacency
@@ -1570,21 +1684,25 @@ warshall.m
 % A = adjacency matrix of graph
 % 
 % Anew = adjacency matrix for transitive closure of graph
+```
 
-
+```matlab
 wavecoeff.m
 % Coefficients for Daubechies wavelets
 %
+```
 
-
+```matlab
 wavetest.m
 % Test the wavelet transform in matrix notation
+```
 
-
+```matlab
 wavetesto.m
 % Test the wavelet transform in wavelet notation (alternate indexing)
+```
 
-
+```matlab
 wavetrans.m
 %
 % Compute the (nonperiodized) discrete wavelet traqnsform 
@@ -1605,8 +1723,9 @@ wavetrans.m
 %     except that ap(1) indicates the number of original datapoints
 %
 % This function simply stacks up the data for a call to the function wave
+```
 
-
+```matlab
 wavetransper.m
 %
 % Compute the periodized discrete wavelet transform of the data
@@ -1621,13 +1740,15 @@ wavetransper.m
 % C = output vector
 %    The output is stacked in C in wavelet-coefficient first order,
 %    C = [d1 d2 ... dJ cJ]
+```
 
-
+```matlab
 wftest.m
 % Test the Wiener filter equalizer for a first-order signal and first-order
 % channel
+```
 
-
+```matlab
 zerorow.m
 % 
 % Zero a row by a series of Givens rotations
@@ -1640,11 +1761,12 @@ zerorow.m
 %
 % B = modified matrix
 % U = (optional) rotation matrix
-
+```
 
 ***************************************************************
 Directory: misc
 ***************************************************************
+```matlab
 H.m
 % 
 % Compute the binary entropy function
@@ -1654,16 +1776,19 @@ H.m
 % p = crossover probability
 %
 % h = binary entropy
+```
 
-
+```matlab
 b2n.m
 % convert an m-bit binary sequence b to an integer
+```
 
-
+```matlab
 bernapprox.m
 % Plot Bernstein polynomials
+```
 
-
+```matlab
 bernpoly.m
 % 
 % compute the Bernstein polynomial g_{nk}(t)
@@ -1675,8 +1800,9 @@ bernpoly.m
 % t = location
 % 
 % g = value
+```
 
-
+```matlab
 bsplineval1.m
 % 
 % When f(x) = sum_i c_i^k B_i^k(x)
@@ -1692,12 +1818,14 @@ bsplineval1.m
 % k = order
 %
 % s = spline value
+```
 
-
+```matlab
 chebinterp.m
 % data for  Chebyshev interpolation example
+```
 
-
+```matlab
 chi2.m
 % 
 % Compute the pdf for a chi-squared random variable
@@ -1708,20 +1836,24 @@ chi2.m
 % n = order of chi-squared
 %
 % f = pdf value
+```
 
-
+```matlab
 compmap1.m
 % Test the composite mapping algorithm on the positive sequence
+```
 
-
+```matlab
 compmap4.m
 % test the positive semi-definite mapping
+```
 
-
+```matlab
 computeremez.m
 % Test the remez algorithm
+```
 
-
+```matlab
 crtgamma.m
 % 
 % Compute the gammas for the CRT
@@ -1731,8 +1863,9 @@ crtgamma.m
 % m = set of modulos
 %
 % gamm = set of gammas
+```
 
-
+```matlab
 crtgammapoly.m
 % 
 % Compute the gammas for the CRT for polynomials
@@ -1742,16 +1875,19 @@ crtgammapoly.m
 % m = set of modulos (polynomials)
 %
 % gamma = set of gammas (polynomials)
+```
 
-
+```matlab
 crypttest.m
 % test the cryptographic example
+```
 
-
+```matlab
 d2b.m
 % convert n to an m-bit binary representation
+```
 
-
+```matlab
 diagstack.m
 % Stack matrices diagonally:
 % D = [X 0
@@ -1761,12 +1897,14 @@ diagstack.m
 % X, Y = input matrices
 %
 % D = diagonal stack
+```
 
-
+```matlab
 discapprox.m
 % find a discrete approximating polynomial
+```
 
-
+```matlab
 divdiff.m
 % 
 % Compute the upper row of a divided difference table
@@ -1777,8 +1915,9 @@ divdiff.m
 % fs = function values
 %
 % c = set of divided differences
+```
 
-
+```matlab
 eigfilcon0.m
 %
 % Find eigenilter constrained so that response is 0 at some frequencies
@@ -1792,8 +1931,9 @@ eigfilcon0.m
 % Wo = list of constraint frequencies at which response is 0
 %
 % h = filter coefficients
+```
 
-
+```matlab
 eigfilcon0new.m
 %
 % Find eigenilter constrained so that response is 0 at some frequencies
@@ -1807,21 +1947,25 @@ eigfilcon0new.m
 % Wo = list of constraint frequencies at which response is 0
 %
 % h = filter coefficients
+```
 
-
+```matlab
 elem.m
 %
 % Return an elementary matrix E_{rs} of size mxn
+```
 
-
+```matlab
 fact.m
 % compute the factorial
+```
 
-
+```matlab
 findprim5.m
 % Find a primitive polynomial in GF(5)
+```
 
-
+```matlab
 fromcrt.m
 % 
 % Given a sequence [y1,y2,\ldots,y2] that is a representation 
@@ -1836,8 +1980,9 @@ fromcrt.m
 %
 % x = integer representation
 % gamma = gamma values
+```
 
-
+```matlab
 fromcrtpoly.m
 % 
 % Compute the representation of the polynomial f using the Chinese Remainder
@@ -1857,8 +2002,9 @@ fromcrtpoly.m
 %
 % f = reconstructed polynomial
 % gamma = gamma
+```
 
-
+```matlab
 fromhankel.m
 %
 % Pull sequential data out of a Hankel matrix X 
@@ -1867,8 +2013,9 @@ fromhankel.m
 % d = (optional) dimension of data
 %
 % x = Sequential data
+```
 
-
+```matlab
 fromhankel2.m
 % Pull sequential data out of a Hankel matrix X  (cell array version)
 %
@@ -1876,8 +2023,9 @@ fromhankel2.m
 % d = (optional) dimension of data
 %
 % x = Sequential data (in a cell array)
+```
 
-
+```matlab
 gam1.m
 % 
 % Determine the optimum bet on a subfair track
@@ -1890,8 +2038,9 @@ gam1.m
 % B = other bets
 % b0 = amount witheld
 % b = bet
+```
 
-
+```matlab
 gcdint1.m
 % 
 % Compute (only) the GCD (a,b) using the Euclidean algorithm
@@ -1901,8 +2050,9 @@ gcdint1.m
 % b,c = integers
 %
 % g = GCD(b,c)
+```
 
-
+```matlab
 gcdint2.m
 % 
 % Compute the GCD g = (b,c) using the Euclidean algorithm
@@ -1913,8 +2063,9 @@ gcdint2.m
 % b,c = integers
 % g = GCD(b,c)
 % s,t = integers
+```
 
-
+```matlab
 gcdpoly.m
 % 
 % Compute the GCD g = (b,c) using the Euclidean algorithm
@@ -1928,8 +2079,9 @@ gcdpoly.m
 %
 % g = GCD(b,c)
 % s,t = polynomials
+```
 
-
+```matlab
 genardat.m
 % 
 % Generate N points of AR data with a = [a(1) a(2), \ldots, a(n)]'
@@ -1942,16 +2094,18 @@ genardat.m
 % N = number of points
 %
 % x = AR process
+```
 
-
+```matlab
 greedyperm.m
 % 
 % Using a greedy algorithm, determine a permutation P such that Px=z
 % as closely as possible.
 %
 % function P = greedyperm(x,z)
+```
 
-
+```matlab
 greedyperm2.m
 % 
 % Using a greedy algorithm, determine a permutation P such that Px=z
@@ -1959,8 +2113,9 @@ greedyperm2.m
 % This algorithm is more complex than greedyperm
 %
 % function P = greedyperm2(x,z)
+```
 
-
+```matlab
 haar1.m
 % Do the computations for the Haar transform, working toward the
 % wavelet lifting transform
@@ -1969,13 +2124,15 @@ haar1.m
 % nlevel = number of levels
 %
 % h = Haar transform
+```
 
-
+```matlab
 haarinv1.m
 % Do the computations for the inverse Haar transform, working toward the
 % wavelet lifting transform
+```
 
-
+```matlab
 hmmApiup.m
 % 
 % Update the A and pi probabilities in the HMM using the forward and
@@ -1991,14 +2148,16 @@ hmmApiup.m
 %
 % A = updated state transition probability
 % pi = updated initial state probability
+```
 
-
+```matlab
 hmmab.m
 % 
 % Compute the forward and backward probabilities for the model HMM
 % and the output probabilities
+```
 
-
+```matlab
 hmmdiscfup.m
 % 
 % Update the output probability distribution f of the HMM using the forward
@@ -2012,8 +2171,9 @@ hmmdiscfup.m
 % HMM = current model parameters
 %
 % f = updated distribution
+```
 
-
+```matlab
 hmmfupdate.m
 % 
 % Provide an update to the state output distributions for the HMM model
@@ -2026,8 +2186,9 @@ hmmfupdate.m
 % HMM = current model parameters
 % 
 % f = updated distribution
+```
 
-
+```matlab
 hmmgausfup.m
 % 
 % Update the Gaussian output distribution f of the HMM using the
@@ -2041,8 +2202,9 @@ hmmgausfup.m
 % HMM = current model parameters
 % 
 % f = updated distribution
+```
 
-
+```matlab
 hmmlpyseq.m
 %
 % Find the log likelihood of the sequence y[1],y[2],...,y[T], 
@@ -2052,8 +2214,9 @@ hmmlpyseq.m
 %
 % y = input sequence
 % HMM = current model parameters
+```
 
-
+```matlab
 hmmupdate.m
 % 
 % Compute updated HMM model from observations (nonnormalized)
@@ -2064,17 +2227,20 @@ hmmupdate.m
 % HMM = current model parameters
 %
 % hmmo = updated model
+```
 
-
+```matlab
 ifs2.m
 % test some ifs stuff
+```
 
-
+```matlab
 ifs2ex.m
 % find an affine transformation Ax + b that transforms from
 % {x00,x10,x20,x30} to {x01,x11,x21,x31}
+```
 
-
+```matlab
 initvit2.m
 % 
 % Initialize the data structures and pointers for the Viterbi algorithm
@@ -2093,8 +2259,9 @@ initvit2.m
 %          branchweight{4,1} = 3; branchweight{4,2} = 3;
 % inpathlen: length of window over which to compute
 % normfun: the norm function used to compute the branch cost
+```
 
-
+```matlab
 interplane.m
 % 
 % find the intersecting point for the planes
@@ -2108,8 +2275,9 @@ interplane.m
 % x2 = point on plane
 %
 % x = intersecting point
+```
 
-
+```matlab
 invdiff.m
 % 
 % Compute the inverse differences for a rational interpolation function,
@@ -2122,28 +2290,33 @@ invdiff.m
 % fs = vector of dependent variable
 %
 % phis = inverse differences
+```
 
-
+```matlab
 jordanex.m
 % example of Jordan forms
+```
 
-
+```matlab
 kaisfilt.m
 % test the design of a Kaiser filter
+```
 
-
+```matlab
 kronsum.m
 %
 % Kronecker sum of A and B.  A and B are assumed square.
 %
 % function C = kronsum(A,B).  
+```
 
-
+```matlab
 lagrangepoly.m
 % 
 % Lagrange interpolator
+```
 
-
+```matlab
 latexform.m
 % 
 % Display a matrix X in latex form
@@ -2153,8 +2326,9 @@ latexform.m
 % fid = output file id (use 1 for terminal display)
 % X = matrix of vector to display
 % nohfill = 1 if no hfill is wanted
+```
 
-
+```matlab
 lfsr.m
 % 
 % Produce m outputs of an lfsr with coefficient c and initial values y0
@@ -2164,15 +2338,17 @@ lfsr.m
 % c = [c(1),c(2),...,c(p)]
 % 
 % y_j = sum_{i=1}^p y_{j-i} c(i)
+```
 
-
+```matlab
 lfsrfind.m
 % 
 % Find a good lfsr c to match Ac=b
 %
 % function c = lfsrfind(A,b)
+```
 
-
+```matlab
 lfsrfind2.m
 % 
 % Find a good lfsr c to match Ac=b
@@ -2180,12 +2356,14 @@ lfsrfind2.m
 % In this case, feed the error back around
 %
 % function c = lfsrfind2(y,m)
+```
 
-
+```matlab
 lsdata.m
 % Make least-squares data matrices 
+```
 
-
+```matlab
 makemarkov.m
 % 
 % Return the sequence of n impulse response samples into the cell array y
@@ -2197,12 +2375,14 @@ makemarkov.m
 % n = number of samples
 %
 % y = cell array of impulse responses
+```
 
-
+```matlab
 makeperm.m
 % Return all permutations of length n
+```
 
-
+```matlab
 maketoeplitz.m
 % 
 % Form a toeplitz matrix from the input data y
@@ -2212,8 +2392,9 @@ maketoeplitz.m
 % y = input data = [y1 y2 ...] (a series of vectors in a _row_)
 % m = number of block rows in H
 % n = number of block columns in H
+```
 
-
+```matlab
 marv.m
 % 
 % Prony: given a sequence of (supposedly) pure sinusoidal data, 
@@ -2224,14 +2405,16 @@ marv.m
 % fs = sampling rate
 %
 % f = frequencies found
+```
 
-
+```matlab
 masseyinit.m
 % Initialize the iteratively called massey's algorithm
 %
 % function masseyinit()
+```
 
-
+```matlab
 masseyit.m
 % 
 % Compute the lfsr connection polynomial using Massey's algorithm
@@ -2241,25 +2424,30 @@ masseyit.m
 % y = new data point
 %
 % c = updated connection polynomial
+```
 
-
+```matlab
 miniapprox1.m
 % minimax approximation example
+```
 
-
+```matlab
 modaldata1.m
 % data for a modal analysis problem
+```
 
-
+```matlab
 myplaysnd.m
 % 
 % Modified and simplified from playsnd, to make the sample rate stuff work
+```
 
-
+```matlab
 n2b.m
 % convert n to an m-bit binary representation
+```
 
-
+```matlab
 neville.m
 % 
 % Neville's algorithm for computing a value for an interpolating polynomial
@@ -2275,8 +2463,9 @@ neville.m
 % Y = Y data
 %
 % y = interpolated value
+```
 
-
+```matlab
 nntrain2.m
 % 
 % train a neural network using the input/output training data [x,d]
@@ -2295,12 +2484,14 @@ nntrain2.m
 % w = (optional) starting weights
 %
 % err = (optional) total squared error from training
+```
 
-
+```matlab
 pade1.m
 % Pade example
+```
 
-
+```matlab
 padefunct.m
 % 
 % Find the Pade approximation from the Maclaurin series coefficients
@@ -2313,34 +2504,41 @@ padefunct.m
 %
 % A = coefficients of numerator polynomial (in Matlab order)
 % B = coefficients of denominator polynomial (in Matlab order)
+```
 
-
+```matlab
 permer.m
 % 
 % function permlist = permer(n1,p,perm,permnew,permlist)
+```
 
-
+```matlab
 pisexamp.m
 % Example for Pisarenko Harmonic Decomposition
+```
 
-
+```matlab
 plotbernapprox.m
 % plot the Benstein polynomial approximation to $f(t) = e^t$
+```
 
-
+```matlab
 plotbernpoly.m
 % plot the Benstein polynomial
+```
 
-
+```matlab
 plotfplane.m
 % plot a function and a linear approximating surface
+```
 
-
+```matlab
 plotplane.m
 % determine points in the plane m'(x-x0) = 0 for plotting purposes
 % 
+```
 
-
+```matlab
 polyadd.m
 %
 % Add the polynomials p=a+b
@@ -2350,8 +2548,9 @@ polyadd.m
 % a,b = polynomial
 %
 % p = polynomial sum.
+```
 
-
+```matlab
 polydiv.m
 % 
 % Divide a(x)/b(x), and return quotient and remainder in q and r
@@ -2365,8 +2564,9 @@ polydiv.m
 %
 % q = quotient
 % r = remainder
+```
 
-
+```matlab
 polydivgfp.m
 % 
 % Divide a(x)/b(x), and return quotient and remainder in q and r
@@ -2380,8 +2580,9 @@ polydivgfp.m
 %
 % q = quotient
 % r = remainder
+```
 
-
+```matlab
 polymult.m
 % 
 % Multipoly the polynomials p=a*b
@@ -2391,8 +2592,9 @@ polymult.m
 % a,b = polynomials
 %
 % p = product
+```
 
-
+```matlab
 polysub.m
 % 
 % Subtract the polynomials p=a-b
@@ -2400,8 +2602,9 @@ polysub.m
 % a,b = polynomials
 %
 % p = difference
+```
 
-
+```matlab
 psdarma.m
 %
 % Plot the psd of an arma model
@@ -2413,15 +2616,17 @@ psdarma.m
 %
 % w = frequency values
 % h = absolute value of response
+```
 
-
+```matlab
 ratinterp.m
 % 
 % Compute the rational function interpolation
 % from the data in ts and fs.
 % Polynomial coefficients returned in Matlab order (largest to smallest)
+```
 
-
+```matlab
 ratinterp1.m
 % 
 % Compute a single interpolated point f(t) given the interpolating data
@@ -2435,12 +2640,14 @@ ratinterp1.m
 % phis = inverse differences
 %
 % f = interpolated value
+```
 
-
+```matlab
 ratintfilt.m
 % Try some data for a rationally-interpolated filter
+```
 
-
+```matlab
 res.m
 % 
 % Computes <a^n>_m
@@ -2452,8 +2659,9 @@ res.m
 % m = modulo
 %
 % d = remainder(a^n,m0
+```
 
-
+```matlab
 schurcohn.m
 % 
 % Returns 1 if p is a Schur polynomial (all roots inside unit circle)
@@ -2463,8 +2671,9 @@ schurcohn.m
 % p = polynomial coefficients
 %
 % stable = 1 if stable polynomial
+```
 
-
+```matlab
 simppivot.m
 % 
 % Pivot a linear programming tableau about the p,q entry
@@ -2475,25 +2684,29 @@ simppivot.m
 % (p,q) = point about which to pivot
 %
 % tableau = pivoted tableau
+```
 
-
+```matlab
 solvlincong.m
 % 
 % Ddetermine the solution to the linear congruence
 % a x equiv b (mod m), if it exists
 %
 % function x = solvlincong(a,m,b)
+```
 
-
+```matlab
 sreal.m
 % sysreal.m
 % data for the system identification example in the SVD stuff
+```
 
-
+```matlab
 sreal1.m
 % SVD realization
+```
 
-
+```matlab
 sugiyama.m
 % 
 % Compute the GCD g = (b,c) using the Euclidean algorithm
@@ -2501,8 +2714,9 @@ sugiyama.m
 % with real coefficients
 %
 % thresh = (optional) threshold argument used to truncate small remainders
+```
 
-
+```matlab
 sysidsvd2.m
 % 
 % given a sequence of impulse responses in h (a cell array)
@@ -2516,12 +2730,14 @@ sysidsvd2.m
 % order = desired order of system
 %
 % (A,B,C) = system
+```
 
-
+```matlab
 taylorf.mm
 (* example of a taylor series *)
+```
 
-
+```matlab
 tocrt.m
 % 
 % Compute the representation of the scalar x using the
@@ -2535,8 +2751,9 @@ tocrt.m
 % m = set of moduli
 %
 % y = CRT representation of x
+```
 
-
+```matlab
 tocrtpoly.m
 % 
 % Compute the representation of the polynomial f using the
@@ -2552,8 +2769,9 @@ tocrtpoly.m
 % m = set of modulo polynomials
 %
 % y = CRT form of f
+```
 
-
+```matlab
 tohankelbig.m
 % 
 % Determine the matrix nearest to A which is (block) Hankel and has rank r
@@ -2567,12 +2785,14 @@ tohankelbig.m
 %
 % A = nearest rank r Hankel matrix
 % diff = norm of difference between matrices
+```
 
-
+```matlab
 triginterp.m
 % demonstrate trigonometric interpolation
+```
 
-
+```matlab
 vandsolve1.m
 %
 % Solves the equation Vx = fs, where V is the Vandermonde
@@ -2584,8 +2804,9 @@ vandsolve1.m
 % fs = ordinate values
 %
 % a = solution
+```
 
-
+```matlab
 vitnop.m
 % 
 % Compute the norm of the difference between inputs
@@ -2594,8 +2815,9 @@ vitnop.m
 %
 % function d = vitnop(branch,input)
 %
+```
 
-
+```matlab
 vitsqnorm.m
 % 
 % Compute the square norm of the difference between inputs
@@ -2603,8 +2825,9 @@ vitsqnorm.m
 % (state and nextstate are not used here)
 %
 % function d = vitsqnorm(branch,input,state,nextstate)
+```
 
-
+```matlab
 wino3by3.m
 % 
 % Convolve the 3-sequence a with the 3-sequence b 
@@ -2612,65 +2835,79 @@ wino3by3.m
 % using Winograd convolution
 %
 % function c = wino3by3(a,b) 
+```
 
-
+```matlab
 winotest.m
 % Set up data for a Winograd convolution algorithm
+```
 
-
+```matlab
 winotest2.m
 % Set up data for a Winograd convolution algorithm 
-
+```
 
 ***************************************************************
 Directory: mkpict
 ***************************************************************
+```matlab
 attract1.m
 % a plot showing an attractor
+```
 
-
+```matlab
 attract2.m
 % a plot showing an attractor
+```
 
-
+```matlab
 bayes1.m
 % Bayes decision tests
+```
 
-
+```matlab
 bayes2.m
 % Bayes decision tests for Gaussian
+```
 
-
+```matlab
 bayes4.m
 % show the decision regions for a 3-way test
+```
 
-
+```matlab
 binchan.m
 % 
 % Data for Bayesian detection on the binary channel
+```
 
-
+```matlab
 binchanex.m
 % data for binary channel
+```
 
-
+```matlab
 chebyplot.m
 % Plot Chebyshev polynomials
+```
 
-
+```matlab
 chi2plot.m
 % 
 % Plot the chi-squared r.v.
+```
 
-
+```matlab
 compmap3.m
 % make figure comppos1
+```
 
-
+```matlab
 condhilb.m
 % Plot the condition of the Hilbert matrix
+```
 
-
+```matlab
 drawtrellis.m
 % 
 % Draw a trellis in LaTeX picture mode
@@ -2683,8 +2920,9 @@ drawtrellis.m
 % p = flag
 %
 % Other values are contained in global variables.  See the file
+```
 
-
+```matlab
 drawtrelpiece.m
 %
 % Draw a piece of a trellis in LaTeX picture mode
@@ -2692,307 +2930,377 @@ drawtrelpiece.m
 % fname = file name
 % trellis = trellis description
 % branchweight = weights of branches
+```
 
-
+```matlab
 drawvit.m
 % Program to draw the paths for the Viterbi algorithm using a LaTeX picture
+```
 
-
+```matlab
 duality1.m
 % Make a plot illustrating duality
+```
 
-
+```matlab
 eigdir.m
 % make a contour plot of eigenstuff
+```
 
-
+```matlab
 eigdir2.m
 % make a contour plot of eigenstuff
+```
 
-
+```matlab
 eigdirex.m
 % make a contour plot of eigenstuff
+```
 
-
+```matlab
 eigdist.m
 % show the asymptotic equal distribution of eigenvalues
+```
 
-
+```matlab
 ellipse.m
 % Plot contours of an ellipse with large eigenvalue disparity
 % and the results of steepest descent
+```
 
-
+```matlab
 ellipsecg.m
 % Plot contours of an ellipse with large eigenvalue disparity
 % and the results of conjugate gradient.
+```
 
-
+```matlab
 entplot.m
 % plot the binary entropy function
+```
 
-
+```matlab
 expmod.m
 % Test Cadzow's results on the sinusoidal modeling
+```
 
-
+```matlab
 fourser.m
 % example Fourier series
+```
 
-
+```matlab
 hilb1.m
 % Program to generate the data for the hilbert approximation to
 % the exponential function
+```
 
-
+```matlab
 ifs3.m
 % Plot the logistic map and the orbit of a point
+```
 
-
+```matlab
 ifs3b.m
 % Plot the logistic map and the orbit of a point
 % do not specify lambda and x0 here: it is done by an upper script
+```
 
-
+```matlab
 ifs4.m
 % Demonstrate the logistic map
+```
 
-
+```matlab
 ifsex3.m
 % find an affine transformation Ax + b that transforms from
 % {x00,x10,x20} to {x01,x11,x21}
+```
 
-
+```matlab
 ifsfig1.m
 % Make side-by-side figures
+```
 
-
+```matlab
 legendreplot.m
 % Plot legendre polynomials
+```
 
-
+```matlab
 makeim.m
 % make a test image for tomography example
+```
 
-
+```matlab
 matcond.m
 % Make an ill-conditioned matrix of sinusoids.
+```
 
-
+```matlab
 matcond2.m
 % Set up an ill-conditioned matrix of sinusoids
+```
 
-
+```matlab
 min1.m
 % make the contour plot for wftest
+```
 
-
+```matlab
 min2.m
 % make the contour plot for wftest
+```
 
-
+```matlab
 moveiter.m
 % test the solution of a moving RHS in the equation Ax=b
+```
 
-
+```matlab
 newt1.m
 % Demonstrate newton's stuff
+```
 
-
+```matlab
 newt2.m
 % Demonstrate newton's stuff on Rosenbrocks function
+```
 
-
+```matlab
 oddeven.m
 % data for odd/even game
+```
 
-
+```matlab
 orthog.mma
 (* sample file for orthogonalization *)
+```
 
-
+```matlab
 patrec1.m
 % generate some simple pattern recognition example data
+```
 
-
+```matlab
 plotI0.m
 % Plot the Bessel function
+```
 
-
+```matlab
 plotJsurf.m
 % plot a quadratice error surface
+```
 
-
+```matlab
 plotbpsk.m
 % Plot the probability of error for BPSK
+```
 
-
+```matlab
 plotgauss.m
 % Plot the Gaussian function
+```
 
-
+```matlab
 plotgauss2.m
 % Plot approximations to the central limit theorem
+```
 
-
+```matlab
 plotgauss3.m
 % plot a Gauss surface plot
+```
 
-
+```matlab
 plotwavelet.m
 % plot the wavelet data
+```
 
-
+```matlab
 roc1.m
 % plot the roc for a gaussian r.v.
+```
 
-
+```matlab
 roc2.m
 % plot the roc for a a xi^2
+```
 
-
+```matlab
 roc3.m
 % plot the roc for a gaussian r.v. and its conjugate
+```
 
-
+```matlab
 rosenbrock.m
 % Plot the Rosenbrock function contours
+```
 
-
+```matlab
 rosengrad.m
 % 
 % compute the gradient of the rosenbrock function for test purposes
 % function grad = rosengrad(x)
+```
 
-
+```matlab
 saddle1.m
 % make a saddle plot 
+```
 
-
+```matlab
 scatter.m
 % create a scatter plot to demonstrate principal component
+```
 
-
+```matlab
 scatterex.m
 % create a scatter plot to demonstrate principal component
+```
 
-
+```matlab
 sigmoid.m
 % plot the sigmoid function
+```
 
-
+```matlab
 steeperr.m
 % Plot errors of the steepest descent
+```
 
-
+```matlab
 steeperrplot.m
 % Make plots of error for steepest descent
+```
 
-
+```matlab
 steepest1.m
 % Demonstrate steepest descent on Rosenbrocks function
+```
 
-
+```matlab
 sugitest.m
 % test the Sugiyama algorithm
+```
 
-
+```matlab
 surf1.m
 % make a surface plot
+```
 
-
+```matlab
 test2regress.m
 % Test the formulas for regression in two dimensions
 % input: x and y vectors
+```
 
-
+```matlab
 test2regress2.m
 % Test the formulas for regression in two dimensions
 % input: x and y vectors
+```
 
-
+```matlab
 testeigfil.m
 % Test the eigenfilter stuff
+```
 
-
+```matlab
 testeigfil2.m
 % Test the eigenfilter stuff
+```
 
-
+```matlab
 testeigfil3.m
 % test the eigenfilter stuff
+```
 
-
+```matlab
 testexlms.m
 % Test the lms in a system identification setting
 % Assume a Gaussian input
+```
 
-
+```matlab
 testlms.m
 % test the lms in an equalizer setting
 % Assume a binary +/- 1 input.
+```
 
-
+```matlab
 testmusic.m
 % Test the music algorithm
+```
 
-
+```matlab
 testnn1.m
 % test the neural network stuff
+```
 
-
+```matlab
 testnn2.m
 % test the neural network stuff
 % (run testnn1.m first to get the network trained)
 %
 % does some plots after the initial training is finished
+```
 
-
+```matlab
 testnn3.m
 % test the neural network stuff
 % try different values of mu and alpha
 % run testnn1 first to get the training data
+```
 
-
+```matlab
 testrls.m
 % test the rls in an equalizer setting
 % Assume a binary +/- 1 input.
+```
 
-
+```matlab
 testrls2.m
 % test the rls in a system identification setting
 % Assume a binary +/- 1 input.
+```
 
-
+```matlab
 testrls2ex.m
 % test the rls in a system identification setting
 % Assume a binary +/- 1 input.
+```
 
-
+```matlab
 testrlsex.m
 % test the rls in an equalizer setting
 % Assume a binary +/- 1 input.
+```
 
-
+```matlab
 testrot.m
 % test the procrustes rotation
+```
 
-
+```matlab
 testtls.m
 % Test tls stuff
+```
 
-
+```matlab
 vq1.m
 % Generate random Gaussian data, determine a codebook for it, and plot
+```
 
-
+```matlab
 wftestcont.m
 % make the contour plot for wftest
-
+```
 
 ***************************************************************
 Directory: solutions
 ***************************************************************
+```matlab
 ator2.m
 % 
 % Given the coefficients from a 2nd-order AR model
@@ -3006,8 +3314,9 @@ ator2.m
 %
 % sigma2 -- output noise variance
 % r1, r2 -- covariance values
+```
 
-
+```matlab
 backdyn.m
 %
 % Backward dynamic programming
@@ -3019,8 +3328,9 @@ backdyn.m
 %
 % pathlist = list of paths
 % cost = cost of paths
+```
 
-
+```matlab
 backsub.m
 % 
 % solve Ux = b, where U is upper triangular
@@ -3030,12 +3340,14 @@ backsub.m
 % b = right and side
 %
 % x = solution
+```
 
-
+```matlab
 bayesest1.m
 % Example of non-Gaussian Bayes estimate
+```
 
-
+```matlab
 correst.m
 % 
 % Estimate the autocorrelation function
@@ -3049,8 +3361,9 @@ correst.m
 % x = data sequence
 %
 % r = estimated correlations
+```
 
-
+```matlab
 fcm.m
 %
 % Find k clusters on the data X using fuzzy clustering
@@ -3061,8 +3374,9 @@ fcm.m
 %
 % Y = set of clusters: each column is a cluster centroid
 % U = membership functions
+```
 
-
+```matlab
 findperm.m
 % 
 % Determine a permutation P such that Px = z (as close as possible)
@@ -3075,15 +3389,17 @@ findperm.m
 % maxiter = optional argument on number of iterations
 %
 % P is an index listing, so the permutation is obtained by x(P) = z.
+```
 
-
+```matlab
 forbacksub.m
 % 
 % Solve Ax = b, where A has been factored as PA = LU
 %
 % function [x] = forbacksub(b,LUin,indx)
+```
 
-
+```matlab
 forbacksubround.m
 % 
 % Solve Ax = b, where A has been factored as PA = LU
@@ -3097,8 +3413,9 @@ forbacksubround.m
 % digits = number of digits to retain
 %
 % x = solution
+```
 
-
+```matlab
 forsub.m
 % 
 % Solve Lx = b, where L is lower triangular
@@ -3109,8 +3426,9 @@ forsub.m
 % b = right-hand side
 %
 % x = solution
+```
 
-
+```matlab
 getulu.m
 % 
 % Return the L and U matrix from the LU factorization computed by newlu
@@ -3122,8 +3440,9 @@ getulu.m
 %
 % L = lower triangle
 % U = upper triangle
+```
 
-
+```matlab
 gramschmidt2.m
 % 
 % Modified Gram-Schmidt: Compute the Gram-Schmidt orthogonalization of the 
@@ -3135,8 +3454,9 @@ gramschmidt2.m
 %
 % Q = orthogonal matrix
 % R = upper triangular matrix
+```
 
-
+```matlab
 gramschmidtW.m
 % 
 % Compute the Gram-Schmidt orthogonalization of the 
@@ -3150,8 +3470,9 @@ gramschmidtW.m
 %
 % Q = orthogonal matrix
 % R = upper triangular matrix
+```
 
-
+```matlab
 gs.m
 % 
 % Gram-Schmidt using symbolic toolbox
@@ -3165,16 +3486,19 @@ gs.m
 % t = variable of integration
 %
 % q = array of orthogonal functions
+```
 
-
+```matlab
 gs.mma
 (* A Gram-Schmidt procedure *)
+```
 
-
+```matlab
 ifs1.m
 % test some ifs stuff
+```
 
-
+```matlab
 mgs.m
 % 
 % Compute the Gram-Schmidt orthogonalization of the 
@@ -3187,8 +3511,9 @@ mgs.m
 %
 % Q = orthogonal matrix
 % R = upper triangular
+```
 
-
+```matlab
 newluround.m
 % 
 % Compute the lu factorization of A
@@ -3205,8 +3530,9 @@ newluround.m
 %
 % lu = matrix containg L and U factors
 % indx = index of pivot permutations
+```
 
-
+```matlab
 newprony.m
 % 
 % Prony's method: Given a sequence of supposedly sinusoidal data with p
@@ -3220,8 +3546,9 @@ newprony.m
 %
 % a = characteristic polynomial 
 % r = roots of the characteristic polynomial
+```
 
-
+```matlab
 plotellipse.m
 % 
 % Determine the points to plot an ellispe in two dimensions, 
@@ -3234,12 +3561,14 @@ plotellipse.m
 % c = constant
 %
 % x = 2 x n list of data points
+```
 
-
+```matlab
 plotlfsrautoc.m
 % plot the autocorrelation of the output of an LFSR
+```
 
-
+```matlab
 rdigits.m
 % 
 % round the input to digits places
@@ -3250,20 +3579,24 @@ rdigits.m
 % digits = number of digits
 %
 % x = rounded value
+```
 
-
+```matlab
 speceig.m
 % Set up a matrix with specified eigenvalue strucure
+```
 
-
+```matlab
 speceig1.m
 % Construct a matrix with given eigenspace structure
+```
 
-
+```matlab
 speceig2.m
 % Construct a matrix with given eigenspace structure
+```
 
-
+```matlab
 wrls.m
 % 
 % Given a scalar input signal x and a desired scalar signal d,
@@ -3278,8 +3611,9 @@ wrls.m
 %
 % h = filter coefficient vector
 % eap = a priori estimation error
+```
 
-
+```matlab
 wrlsinit.m
 % 
 % Initialize the weighted RLS filter
@@ -3289,165 +3623,200 @@ wrlsinit.m
 % m = dimension of vector
 % delta = a small positive constant used for initial correlation inverse
 % lambdain = value of lambda to use for decay factor
-
+```
 
 ***************************************************************
 Directory: testers
 ***************************************************************
+```matlab
 arttest.m
 % test the ART algorithm
+```
 
-
+```matlab
 bliter.m
 %
 % test reconstruction of bandlimited function
+```
 
-
+```matlab
 conjgradtest.m
 % Test the conjugate gradient algorithm
+```
 
-
+```matlab
 dijtest.m
 % Test Sisjstras and Warshall's algorithms
+```
 
-
+```matlab
 givens1.m
 % test a Givens matrix
+```
 
-
+```matlab
 hmmtest.m
 % Test data for the HMM
+```
 
-
+```matlab
 hmmtest2.m
 % Test data for the HMM
+```
 
-
+```matlab
 hmmtest21.m
+```
 
-
+```matlab
 hmmtest22.m
+```
 
-
+```matlab
 hmmtest23.m
+```
 
-
+```matlab
 hmmtest24.m
 % axis([1 4 -25 -5])
+```
 
-
+```matlab
 hmmtest2v.m
 % Test the HMM using both Viterbi and EM-algorithm based training methods
 %  the file hmmtest2vb.m contains identical results, but without the
 %  plotting instructions at the end.  
+```
 
-
+```matlab
 hmmvit.m
 % test the HMM stuff using the VA
+```
 
-
+```matlab
 houseW.m
 % test the weighted Householder idea
+```
 
-
+```matlab
 lpfilttest.m
 % test the linear programming filter design
+```
 
-
+```matlab
 testbackdyn.m
 % test the forward dynamic programming algorithm
+```
 
-
+```matlab
 testeigcomp.m
 % Test the eigencomputation routine
+```
 
-
+```matlab
 testfblp.m
 % Test the fblp AR estimator
+```
 
-
+```matlab
 testfindperm.m
 % Test the findperm program
+```
 
-
+```matlab
 testfordyn.m
 % Test the forward dynamic programming algorithm
+```
 
-
+```matlab
 testkarmarker.m
 % testkarmarker.m: Test the Karmarker linear programming solution
+```
 
-
+```matlab
 testmarv.m
 % Test the Prony's method in marv.m
+```
 
-
+```matlab
 testmassey.m
 % a sequence with a linear complexity of 5
+```
 
-
+```matlab
 testmassey2.m
 % Test the routines to find lfsrs for data compression
+```
 
-
+```matlab
 testpolydiv.m
 % test the polynomial division stuff
+```
 
-
+```matlab
 testprim5.m
 % generate elements in GF(5^2) using p(x) = x^2 + x+2
+```
 
-
+```matlab
 testprony.m
 % Test the prony method
+```
 
-
+```matlab
 vit2test.m
 % Test and plot the results of the viterbi algorithm
+```
 
-
+```matlab
 vittest.m
 % 
 % Test and plot the results of the viterbi
 %
 % function vittest()
+```
 
-
+```matlab
 vittest1.m
 % demonstrate the VA
+```
 
-
+```matlab
 vittest2.m
 %
 % Test and plot the results of the viterbi
 %
 %  function vittest()
+```
 
-
+```matlab
 vittest3.m
 %
 % Ttest and plot the results of the viterbi
 % 
 % function vittest()
+```
 
-
+```matlab
 vittest4.m
 % Test and plot the results of the viterbi
+```
 
-
+```matlab
 vittest5.m
 % 
 % Test and plot the results of the viterbi
 % 
 % function vittest()
+```
 
-
+```matlab
 wavetest2.m
 % Test some computations for wavelet transforms (matrix-based)
+```
 
-
+```matlab
 wftest2.m
 % test the Wiener filter equalizer stuff for a first-order signal and
 % first-order channel
-
-
+```
